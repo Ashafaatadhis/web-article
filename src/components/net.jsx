@@ -4,17 +4,7 @@ import { useTheme } from "next-themes";
 import styles from "./Net.module.css";
 import NET from "vanta/dist/vanta.net.min";
 
-const Net = ({
-  children,
-  className,
-  setMounted,
-  mounted,
-}: {
-  children: React.ReactNode;
-  className: string;
-  setMounted: any;
-  mounted: boolean;
-}) => {
+const Net = ({ children, className, setMounted, mounted }) => {
   const { theme } = useTheme();
   const [vantaEffect, setVantaEffect] = useState(null);
   // const [mounted, setMounted] = useState(false);
