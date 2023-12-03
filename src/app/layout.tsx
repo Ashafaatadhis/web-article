@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <script
-          async
+          defer
           src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
         ></script>
       </head>
