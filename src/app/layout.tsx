@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Providers } from "./providers";
 import { ActiveProvider } from "@/context/ActiveContext";
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></Script>
       </head>
       <body className={`${inter.className}  bg-white dark:bg-[#212121]`}>
         <Providers>
