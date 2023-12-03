@@ -15,7 +15,7 @@ const Net = ({ children, className, setMounted, mounted }) => {
       let vantaInstance;
       if (myRef.current) {
         if (theme === "light") {
-          vantaInstance = NET({
+          vantaInstance = await NET({
             el: myRef.current,
             color: 0xcdbd9,
             backgroundColor: 0xf5f5f5,
@@ -30,7 +30,7 @@ const Net = ({ children, className, setMounted, mounted }) => {
         } else {
           // Tambahkan pengecekan apakah myRef.current tidak null sebelum inisialisasi NET
 
-          vantaInstance = NET({
+          vantaInstance = await NET({
             el: myRef.current,
             mouseControls: true,
             touchControls: true,
@@ -48,11 +48,14 @@ const Net = ({ children, className, setMounted, mounted }) => {
     };
 
     initVantaEffect();
-
+    console.log(theme);
     setMounted(true);
 
     return () => {
-      if (vantaEffect) vantaEffect.destroy();
+      if (vantaEffect) {
+        vantaEffect.destroy();
+        setMounted(false);
+      }
     };
   }, [theme, mounted]);
   if (!mounted) return null;
@@ -60,7 +63,7 @@ const Net = ({ children, className, setMounted, mounted }) => {
     <div
       ref={myRef}
       className={`${
-        theme == "dark" ? styles.netDark : styles.netLight
+        theme == "light" ? styles.netLight : styles.netDark
       } ${className}`}
     >
       {children}
