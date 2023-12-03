@@ -57,8 +57,8 @@ const Net = ({ children, className, setMounted, mounted }) => {
         setMounted(false);
       }
     };
-  }, [theme, mounted, vantaEffect]);
-  if (!mounted || !vantaEffect) return null;
+  }, [theme, mounted]);
+  if (!mounted) return null;
   return (
     <div
       ref={myRef}
