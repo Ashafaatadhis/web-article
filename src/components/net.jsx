@@ -11,44 +11,42 @@ const Net = ({ children, className, setMounted, mounted }) => {
   const myRef = useRef(null);
 
   useEffect(() => {
-    const initVantaEffect = async () => {
-      let vantaInstance;
-      if (myRef.current) {
-        if (theme === "light") {
-          vantaInstance = await NET({
-            el: myRef.current,
-            color: 0xcdbd9,
-            backgroundColor: 0xf5f5f5,
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 0,
-            minWidth: 0,
-            scale: 1.0,
-            scaleMobile: 1.0,
-          });
-        } else {
-          // Tambahkan pengecekan apakah myRef.current tidak null sebelum inisialisasi NET
+    console.log("Tes");
 
-          vantaInstance = await NET({
-            el: myRef.current,
-            mouseControls: true,
-            touchControls: true,
-            color: 0x810c,
-            backgroundColor: 0x212121,
-            gyroControls: false,
-            minHeight: 0,
-            minWidth: 0,
-            scale: 1.0,
-            scaleMobile: 1.0,
-          });
-        }
+    let vantaInstance;
+    if (myRef.current && !vantaEffect) {
+      if (theme === "light") {
+        vantaInstance = NET({
+          el: myRef.current,
+          color: 0xcdbd9,
+          backgroundColor: 0xf5f5f5,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 0,
+          minWidth: 0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+        });
+      } else {
+        // Tambahkan pengecekan apakah myRef.current tidak null sebelum inisialisasi NET
+
+        vantaInstance = NET({
+          el: myRef.current,
+          mouseControls: true,
+          touchControls: true,
+          color: 0x810c,
+          backgroundColor: 0x212121,
+          gyroControls: false,
+          minHeight: 0,
+          minWidth: 0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+        });
       }
       setVantaEffect(vantaInstance);
-    };
+    }
 
-    initVantaEffect();
-    console.log(theme);
     setMounted(true);
 
     return () => {
@@ -57,7 +55,7 @@ const Net = ({ children, className, setMounted, mounted }) => {
         setMounted(false);
       }
     };
-  }, [theme, mounted]);
+  }, [theme, mounted, vantaEffect]);
   if (!mounted) return null;
   return (
     <div
