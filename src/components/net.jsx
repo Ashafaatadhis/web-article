@@ -57,16 +57,13 @@ const Net = ({ children, className, setMounted, mounted }) => {
   }, [theme, mounted]);
   if (!mounted) return null;
   return (
-    <div>
-      {theme === "dark" ? (
-        <div ref={myRef} className={`${styles.netDark} ${className}`}>
-          {children}
-        </div>
-      ) : (
-        <div ref={myRef} className={`${styles.netLight} ${className}`}>
-          {children}
-        </div>
-      )}
+    <div
+      ref={myRef}
+      className={`${
+        theme == "dark" ? styles.netDark : styles.netLight
+      } ${className}`}
+    >
+      {children}
     </div>
   );
 };

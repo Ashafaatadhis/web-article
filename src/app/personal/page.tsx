@@ -39,6 +39,7 @@ const Personal = () => {
   const { setInactive } = useActive();
 
   useEffect(() => {
+    setInactive();
     return () => {
       setInactive();
     };

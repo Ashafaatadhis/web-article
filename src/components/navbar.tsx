@@ -64,9 +64,13 @@ const Navbar = () => {
             <RxHamburgerMenu />
           </div>
           <div className="list-none hidden sm:flex gap-[30px]">
-            <li>Artikel</li>
+            <li>
+              <Link href={"/"}>Artikel</Link>
+            </li>
             <li>Projek</li>
-            <li>Author</li>
+            <li>
+              <Link href={"/personal"}>Author</Link>
+            </li>
 
             <li className="text-xl">
               <button
