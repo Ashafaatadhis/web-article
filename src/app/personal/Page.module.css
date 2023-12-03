@@ -1,0 +1,16 @@
+.textHole {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 40%,
+    black 40%,
+    black 60%,
+    transparent 60%,
+    transparent 100%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  font-size: 1rem; /* Sesuaikan ukuran font sesuai kebutuhan */
+  font-weight: bold; /* Sesuaikan bobot font sesuai kebutuhan */
+}
