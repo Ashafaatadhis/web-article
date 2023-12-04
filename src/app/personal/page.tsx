@@ -55,7 +55,7 @@ const Personal = () => {
         <Container className="min-h-full flex items-center justify-center ">
           <div className="lg:flex-row   flex-col flex gap-4 lg:gap-[80px]">
             <div className="lg:w-1/4 mx-auto">
-              <div className="w-[200px] flex items-center sm:w-[300px]   dark:bg-[#ffffff27]   rounded-full shadow-xl bg-white p-2">
+              <div className="w-[220px] flex items-center sm:w-[300px]   dark:bg-[#ffffff27]   rounded-full shadow-xl bg-white p-2">
                 <div className="w-fit dark:bg-[#dac6ff] rounded-full">
                   <Image
                     src="/ayang.jpg"
@@ -69,15 +69,15 @@ const Personal = () => {
             </div>
 
             <div className="w-full text-center sm:text-start lg:w-3/4 lg:items-start items-center flex flex-col">
-              <span className="text-[10px] sm:text-base lg:text-lg">
+              <span className="text-base lg:text-lg">
                 WEB DEVELOPER / BACKEND DEVELOPER
               </span>
-              <h1 className="text-xl sm:text-3xl lg:text-7xl mt-auto">
+              <h1 className="text-3xl lg:text-7xl mt-auto">
                 ADHIS MAULIYAHSA ASHAFAAT
               </h1>
               <div className="pt-1 font-medium sm:pt-3">
                 <button
-                  className={`bg-black dark:bg-white dark:text-black text-white lg:mt-auto w-fit text-xs sm:text-base  p-1 sm:p-3 rounded`}
+                  className={`bg-black dark:bg-white dark:text-black text-white lg:mt-auto w-fit text-sm sm:text-base  p-1 sm:p-3 rounded`}
                 >
                   CONTACT ME
                 </button>
@@ -89,10 +89,10 @@ const Personal = () => {
       {mounted && (
         <Container className={`${dosis.className} `}>
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium dark:text-[#61c434] text-[#1B6B93]">
+            <h2 className="text-3xl lg:text-4xl font-medium dark:text-[#61c434] text-[#1B6B93]">
               About Me:
             </h2>
-            <p className="sm:mt-4 text-[12px] sm:text-base lg:text-xl sm:leading-8">
+            <p className="mt-2 sm:mt-4 text-base lg:text-xl lg:leading-8">
               Hi, my name is Adhis Mauliyahsa Ashafaat, i am a Fullstack web
               developer, UI designer, and Mobile developer. I jhave honed my
               skills in Web Development and advance i have core understanding of
@@ -100,22 +100,22 @@ const Personal = () => {
             </p>
           </div>
           <div className="flex pt-2 sm:pt-5 gap-2 sm:gap-6 items-center">
-            <div className="dark:text-[#61c434] text-4xl sm:text-7xl text-[#1B6B93]">
+            <div className="dark:text-[#61c434] text-5xl sm:text-7xl text-[#1B6B93]">
               <span>5+</span>
             </div>
-            <div className="text-[13px] sm:text-lg lg:text-xl">
+            <div className="text-lg  sm:text-2xl">
               Years of experience. Specialised in building apps, while ensuring
               a seamless web experience for end users.
             </div>
           </div>
           <div>
             <div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl  font-medium mt-5 sm:mt-12 dark:text-[#61c434] text-[#1B6B93]">
+              <h2 className="text-3xl lg:text-4xl  font-medium mt-5 sm:mt-12 dark:text-[#61c434] text-[#1B6B93]">
                 My Skills:
               </h2>
             </div>
             {/* card */}
-            <div className="block sm:flex  gap-4 pt-2 sm:pt-5  ">
+            <div className="block sm:flex  gap-4 mt-4  ">
               <div className="h-[200px] sm:h-[320px] mb-4 gap-1 sm:gap-4 border px-6 items-center justify-center flex flex-col border-[#1B6B93] dark:border-[#61c434]  flex-1 rounded-xl   shadow  backdrop-blur ">
                 <p className="text-[26px] sm:text-[32px]">
                   <TfiRulerPencil />
@@ -170,16 +170,16 @@ const Personal = () => {
               </div>
             </div> */}
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl  font-medium mt-5 sm:mt-12 dark:text-[#61c434] text-[#1B6B93]">
+            <h2 className="text-3xl lg:text-4xl  font-medium mt-5 sm:mt-12 dark:text-[#61c434] text-[#1B6B93]">
               My Projects:
             </h2>
-            <p className="sm:mt-4  text-[12px] sm:text-base lg:text-xl sm:leading-8">
+            <p className="mt-2 sm:mt-4  text-base lg:text-xl sm:leading-8">
               I have worked on many projects over the course of being a Web
               Developer, here are a few of my live, real-world projects
             </p>
             <div className={`block sm:flex  gap-4 pt-2 sm:pt-5`}>
               <div className="p-3 dark:bg-[#656579] mb-4  dark:bg-opacity-40  flex-1 rounded-md   shadow backdrop-blur-sm ">
-                <div className="w-full border  border-[#1B6B93] dark:border-[#61c434] h-[75px] sm:h-[150px] rounded-md overflow-hidden">
+                <div className="w-full border  border-[#1B6B93] dark:border-[#61c434] h-[150px] sm:h-[150px] rounded-md overflow-hidden">
                   <Image
                     className="w-full h-full object-cover"
                     alt=""
@@ -188,15 +188,15 @@ const Personal = () => {
                     height={300}
                   />
                 </div>
-                <div className="mt-2">
-                  <span className="dark:text-[#61c434] font-medium text-[18px] leading-5 sm:text-[22px] text-[#1B6B93]">
+                <div className="mt-4">
+                  <span className="dark:text-[#61c434] font-medium  leading-5 text-2xl text-[#1B6B93]">
                     MOOVE
                   </span>
-                  <p className="text-[10px] sm:text-sm leading-5">
+                  <p className="text-base leading-5 mt-1">
                     Mobile app for ddinstant pickup & dropoff accross major
                     cities.
                   </p>
-                  <div className="flex gap-3 text-[10px] sm:text-sm mt-10">
+                  <div className="flex gap-3 text-base mt-10">
                     <button className="text-white px-5 py-[6px] dark:bg-[#61c434] bg-[#1B6B93] rounded ">
                       View Live
                     </button>
@@ -207,7 +207,7 @@ const Personal = () => {
                 </div>
               </div>
               <div className="p-3 dark:bg-[#656579] mb-4  dark:bg-opacity-40  flex-1 rounded-md   shadow backdrop-blur-sm ">
-                <div className="w-full border  border-[#1B6B93] dark:border-[#61c434] h-[75px] sm:h-[150px] rounded-md overflow-hidden">
+                <div className="w-full border  border-[#1B6B93] dark:border-[#61c434] h-[150px] sm:h-[150px] rounded-md overflow-hidden">
                   <Image
                     className="w-full h-full object-cover"
                     alt=""
@@ -216,15 +216,15 @@ const Personal = () => {
                     height={300}
                   />
                 </div>
-                <div className="mt-2">
-                  <span className="dark:text-[#61c434] font-medium text-[18px] leading-5 sm:text-[22px] text-[#1B6B93]">
+                <div className="mt-4">
+                  <span className="dark:text-[#61c434] font-medium  leading-5 text-2xl text-[#1B6B93]">
                     MOOVE
                   </span>
-                  <p className="text-[10px] sm:text-sm leading-5">
+                  <p className="text-base leading-5 mt-1">
                     Mobile app for ddinstant pickup & dropoff accross major
                     cities.
                   </p>
-                  <div className="flex gap-3 text-[10px] sm:text-sm mt-10">
+                  <div className="flex gap-3 text-base mt-10">
                     <button className="text-white px-5 py-[6px] dark:bg-[#61c434] bg-[#1B6B93] rounded ">
                       View Live
                     </button>
@@ -235,7 +235,7 @@ const Personal = () => {
                 </div>
               </div>
               <div className="p-3 dark:bg-[#656579] mb-4  dark:bg-opacity-40  flex-1 rounded-md   shadow backdrop-blur-sm ">
-                <div className="w-full border  border-[#1B6B93] dark:border-[#61c434] h-[75px] sm:h-[150px] rounded-md overflow-hidden">
+                <div className="w-full border  border-[#1B6B93] dark:border-[#61c434] h-[150px] sm:h-[150px] rounded-md overflow-hidden">
                   <Image
                     className="w-full h-full object-cover"
                     alt=""
@@ -244,15 +244,15 @@ const Personal = () => {
                     height={300}
                   />
                 </div>
-                <div className="mt-2">
-                  <span className="dark:text-[#61c434] font-medium text-[18px] leading-5 sm:text-[22px] text-[#1B6B93]">
+                <div className="mt-4">
+                  <span className="dark:text-[#61c434] font-medium  leading-5 text-2xl text-[#1B6B93]">
                     MOOVE
                   </span>
-                  <p className="text-[10px] sm:text-sm leading-5">
+                  <p className="text-base leading-5 mt-1">
                     Mobile app for ddinstant pickup & dropoff accross major
                     cities.
                   </p>
-                  <div className="flex gap-3 text-[10px] sm:text-sm mt-10">
+                  <div className="flex gap-3 text-base mt-10">
                     <button className="text-white px-5 py-[6px] dark:bg-[#61c434] bg-[#1B6B93] rounded ">
                       View Live
                     </button>
