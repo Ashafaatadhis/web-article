@@ -1,7 +1,8 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
-import * as THREE from "three";
+// import p5 from "p5";
+import * as THREE from "./three.min";
 import styles from "./Net.module.css";
 import NET from "vanta/dist/vanta.net.min";
 
@@ -17,14 +18,15 @@ const Net = ({ children, className, setMounted, mounted }) => {
       if (theme === "light") {
         vantaInstance = NET({
           el: myRef.current,
-          color: 0xcdbd9,
           THREE: THREE,
+          color: 0xcdbd9,
+
           backgroundColor: 0xf5f5f5,
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
-          minHeight: 0,
-          minWidth: 0,
+          minHeight: 600.0,
+          minWidth: 600.0,
           scale: 1.0,
           scaleMobile: 1.0,
         });
@@ -33,14 +35,15 @@ const Net = ({ children, className, setMounted, mounted }) => {
 
         vantaInstance = NET({
           el: myRef.current,
+          THREE: THREE,
           mouseControls: true,
           touchControls: true,
-          THREE: THREE,
+
           color: 0x810c,
           backgroundColor: 0x212121,
           gyroControls: false,
-          minHeight: 0,
-          minWidth: 0,
+          minHeight: 600.0,
+          minWidth: 600.0,
           scale: 1.0,
           scaleMobile: 1.0,
         });
@@ -69,7 +72,7 @@ const Net = ({ children, className, setMounted, mounted }) => {
         });
       } else {
         // Tambahkan pengecekan apakah myRef.current tidak null sebelum inisialisasi NET
-        console.log("KONTOL");
+
         vantaEffect.setOptions({
           color: 0x61c434,
           backgroundColor: 0x212121,
