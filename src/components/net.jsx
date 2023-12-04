@@ -25,8 +25,8 @@ const Net = ({ children, className, setMounted, mounted }) => {
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
-          minHeight: 600.0,
-          minWidth: 600.0,
+          minHeight: 0,
+          minWidth: 0,
           scale: 1.0,
           scaleMobile: 1.0,
         });
@@ -42,8 +42,8 @@ const Net = ({ children, className, setMounted, mounted }) => {
           color: 0x810c,
           backgroundColor: 0x212121,
           gyroControls: false,
-          minHeight: 600.0,
-          minWidth: 600.0,
+          minHeight: 0,
+          minWidth: 0,
           scale: 1.0,
           scaleMobile: 1.0,
         });
