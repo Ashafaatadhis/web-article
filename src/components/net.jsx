@@ -57,7 +57,8 @@ const Net = ({ children, className, setMounted, mounted }) => {
 
   useEffect(() => {
     console.log(theme);
-    if (myRef.current) {
+    console.log("Terapgngi'");
+    if (myRef.current && vantaEffect) {
       if (theme === "light") {
         vantaEffect.setOptions({
           el: myRef.current,
@@ -88,7 +89,7 @@ const Net = ({ children, className, setMounted, mounted }) => {
         });
       }
     }
-  }, [theme]);
+  }, [theme, vantaEffect]);
 
   if (!mounted) return null;
   return (
