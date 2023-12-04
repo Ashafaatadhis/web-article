@@ -6,6 +6,7 @@ import { MdDarkMode } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import Link from "next/link";
 import { MdLightMode } from "react-icons/md";
+import { usePathname } from "next/navigation";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { ActiveProvider, useActive } from "@/context/ActiveContext";
 import { Space_Grotesk } from "next/font/google";
@@ -17,6 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 
 const Navbar = () => {
   const [mounted, setMounted] = useState(false);
+  const router = usePathname();
   const { isActive, setInactive, setActive } = useActive();
 
   //   const [isActive, setIsActive] = useState(false);
@@ -68,7 +70,11 @@ const Navbar = () => {
               <Link href={"/"}>Artikel</Link>
             </li>
             <li>Projek</li>
-            <li>
+            <li
+              onClick={() => {
+                console.log("DUAR");
+              }}
+            >
               <Link href={"/personal"}>Author</Link>
             </li>
 
@@ -89,6 +95,7 @@ const Navbar = () => {
           if (!popupRef.current?.contains(e?.target as Node)) {
             setInactive();
           }
+          // setInactive();
         }}
         className={`${
           isActive ? "flex" : "hidden"
@@ -106,14 +113,22 @@ const Navbar = () => {
           >
             <IoMdClose />
           </li>
-          <li>
+          <li
+            onClick={() => {
+              router === "/" && setInactive();
+            }}
+          >
             <Link href={"/"}>Artikel</Link>
           </li>
 
           <li>
             <button>Projek</button>
           </li>
-          <li>
+          <li
+            onClick={() => {
+              router === "/personal" && setInactive();
+            }}
+          >
             <Link href={"/personal"}>Author</Link>
           </li>
 

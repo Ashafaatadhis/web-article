@@ -46,7 +46,11 @@ const Personal = () => {
   }, []);
 
   return (
-    <main>
+    <main
+      onClick={() => {
+        console.log("ADUHH");
+      }}
+    >
       <Net
         mounted={mounted}
         setMounted={setMounted}
