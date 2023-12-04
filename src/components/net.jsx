@@ -11,8 +11,6 @@ const Net = ({ children, className, setMounted, mounted }) => {
   const myRef = useRef(null);
 
   useEffect(() => {
-    console.log("Tes");
-
     let vantaInstance;
     if (myRef.current && !vantaEffect) {
       if (theme === "light") {
