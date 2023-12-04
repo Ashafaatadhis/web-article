@@ -19,7 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head></head>
+      <head>
+        <script
+          async
+          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
+        ></script>
+      </head>
       <body className={`${inter.className}  bg-white dark:bg-[#212121]`}>
         <Providers>
           <ActiveProvider>
