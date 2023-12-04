@@ -91,7 +91,7 @@ const Net = ({ children, className, setMounted, mounted }) => {
     }
   }, [theme, vantaEffect]);
 
-  if (!mounted) return null;
+  if (mounted) return null;
   return (
     <div
       ref={myRef}
