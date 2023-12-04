@@ -35,7 +35,7 @@ const dosis = Dosis({
 });
 
 const Personal = () => {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(true);
   const { setInactive } = useActive();
 
   useEffect(() => {

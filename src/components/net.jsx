@@ -45,7 +45,7 @@ const Net = ({ children, className, setMounted, mounted }) => {
       setVantaEffect(vantaInstance);
     }
 
-    setMounted(true);
+    setMounted(false);
 
     return () => {
       if (vantaEffect) {
