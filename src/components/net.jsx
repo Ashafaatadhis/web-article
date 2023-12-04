@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
+import * as THREE from "three";
 import styles from "./Net.module.css";
 import NET from "vanta/dist/vanta.net.min";
 
@@ -17,6 +18,7 @@ const Net = ({ children, className, setMounted, mounted }) => {
         vantaInstance = NET({
           el: myRef.current,
           color: 0xcdbd9,
+          THREE: THREE,
           backgroundColor: 0xf5f5f5,
           mouseControls: true,
           touchControls: true,
@@ -33,6 +35,7 @@ const Net = ({ children, className, setMounted, mounted }) => {
           el: myRef.current,
           mouseControls: true,
           touchControls: true,
+          THREE: THREE,
           color: 0x810c,
           backgroundColor: 0x212121,
           gyroControls: false,
@@ -45,7 +48,7 @@ const Net = ({ children, className, setMounted, mounted }) => {
       setVantaEffect(vantaInstance);
     }
 
-    setMounted(false);
+    setMounted(true);
 
     return () => {
       if (vantaEffect) {
@@ -61,37 +64,21 @@ const Net = ({ children, className, setMounted, mounted }) => {
     if (myRef.current && vantaEffect) {
       if (theme === "light") {
         vantaEffect.setOptions({
-          el: myRef.current,
           color: 0xcdbd9,
           backgroundColor: 0xf5f5f5,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 0,
-          minWidth: 0,
-          scale: 1.0,
-          scaleMobile: 1.0,
         });
       } else {
         // Tambahkan pengecekan apakah myRef.current tidak null sebelum inisialisasi NET
-
+        console.log("KONTOL");
         vantaEffect.setOptions({
-          el: myRef.current,
-          mouseControls: true,
-          touchControls: true,
-          color: 0x810c,
+          color: 0x61c434,
           backgroundColor: 0x212121,
-          gyroControls: false,
-          minHeight: 0,
-          minWidth: 0,
-          scale: 1.0,
-          scaleMobile: 1.0,
         });
       }
     }
   }, [theme, vantaEffect]);
 
-  if (mounted) return null;
+  if (!mounted) return null;
   return (
     <div
       ref={myRef}
